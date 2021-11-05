@@ -5,7 +5,7 @@
         <conditions />
       </template>
       <template slot="content">
-        <al-table :column="formData.column" :data="formData.list" :pagination="true" />
+        <al-table :column="formData.column" :data="formData.list" :pagination="true" border />
       </template>
     </list-layout>
 
@@ -27,6 +27,9 @@ export default {
     return {
       formData: {
         column: [
+          {
+            type: 'selection'
+          },
           {
             prop: 'nick',
             label: '昵称'
@@ -83,4 +86,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>
